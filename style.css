@@ -18,3 +18,93 @@ aside:hover {
 * {
   scrollbar-color: #888 #ffffff;
 }
+
+.video-placeholder{
+  background-color: #e6e6e6;
+  animation: loading 1s infinite;
+}
+
+.img-placeholder{
+  background-color: #e6e6e6;
+  animation: loading 1s infinite;
+}
+
+.info-placeholder{
+  background-color: #e6e6e6;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0%{
+    background-color: #e6e6e6;
+  }
+  60%{
+    background-color: #d6d6d6;
+  }
+  100%{
+    background-color: #e6e6e6;
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  #aside{
+    display: none;
+  }
+  #main_section{
+    padding-left: 72px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav input[type="text"] {
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 1012px) {
+  #main_section > section:nth-child(2) > .video {
+    width: 50%;
+  }
+  #main_section > section:nth-child(5) > .video {
+    width: 50%;
+  }
+  #main_section > section:nth-child(8) > .video {
+    width: 50%;
+  }
+  #main_section > section:nth-child(9) > .video {
+    width: 50%;
+  }
+  nav input[type="text"] {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 858px) {
+  nav input[type="text"] {
+    width: 200px;
+  }
+  #main_section{
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #main_section > section:nth-child(2) > .video {
+    width: 100%;
+  }
+  #main_section > section:nth-child(5) > .video {
+    width: 100%;
+  }
+  #main_section > section:nth-child(8) > .video {
+    width: 100%;
+  }
+  #main_section > section:nth-child(9) > .video {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav input[type="text"] {
+    width: 150px;
+  }
+}
