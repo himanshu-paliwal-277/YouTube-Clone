@@ -1,102 +1,166 @@
 let video_play_button = document.querySelectorAll(".video_play_button");
-let youtube_video_link = document.querySelectorAll(".youtube_video_link");
 let youtube_shorts_play_button = document.querySelectorAll(
   ".youtube_shorts_play_button"
 );
-let youtube_shorts_link = document.querySelectorAll(".youtube_shorts_link");
-let youtube_video_originalURL = [
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-    "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
-];
-let youtube_shorts_originalURL = [
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-  "https://www.youtube.com/embed/HQidzZ81Xlg",
-];
+let iframe_div = document.querySelectorAll(".iframe_div");
+let shorts_iframe_div = document.querySelectorAll(".shorts_iframe_div");
 
-// handling youtube video play / pause
-video_play_button.forEach((play_button, index) => {
-  play_button.addEventListener("click", () => {
-    play_button.classList.add("hidden");
-    youtube_video_link[index].classList.remove("hidden");
-    let videoURL = youtube_video_link[index].src;
-    youtube_video_originalURL[index] = videoURL;
+// Menu Button
+let menu_button = document.getElementById("menu_button");
+let aside = document.getElementById("aside");
+let aside_nav = document.getElementById("aside_nav");
+let main_section = document.getElementById("main_section");
+let youtube_video_img_skeleton = document.getElementById(
+  "youtube_video_img_skeleton"
+);
+let youtube_shorts_img_skeleton = document.getElementById(
+  "youtube_shorts_img_skeleton"
+);
+
+// handling youtube video thumbnail and youtube video iframe to play and pause
+video_play_button.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    iframe_div.forEach((iframe, i) => {
+      if (index != i) {
+        iframe.innerHTML = "";
+      }
+    });
+    iframe_div[index].innerHTML = `<iframe
+    id="iframe"
+    class="hidden rounded-xl w-full video-placeholder"
+    src="https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>`;
+    let iframe = document.getElementById("iframe");
+    button.classList.add("hidden");
+    let videoURL = iframe.src;
     videoURL = videoURL + "&autoplay=1&mute=1";
-    youtube_video_link[index].src = videoURL;
-    video_play_button.forEach((element, i) => {
-      if (index !== i) {
-        element.classList.remove("hidden");
+    iframe.src = videoURL;
+    iframe.classList.remove("hidden");
+    // iframe.requestFullscreen();
+    let h = youtube_video_img_skeleton.height;
+    iframe.style.height = `${h}px`;
+    video_play_button.forEach((button, i) => {
+      if (index != i) {
+        button.classList.remove("hidden");
       }
     });
-    youtube_video_link.forEach((element, i) => {
-      if (index !== i) {
-        element.classList.add("hidden");
-        videoURL = youtube_video_originalURL[i];
-        youtube_video_link[i].src = videoURL;
-      }
+    // stop playing shorts video
+    shorts_iframe_div.forEach((iframe) => {
+      iframe.innerHTML = "";
     });
-    // stop playing shorts when click to any video
-    youtube_shorts_play_button.forEach((element, i) => {
-      element.classList.remove("hidden");
-    });
-    youtube_shorts_link.forEach((element, i) => {
-      element.classList.add("hidden");
-      youtube_shorts_link[i].src = youtube_shorts_originalURL[i];
+    youtube_shorts_play_button.forEach((shorts_play_button) => {
+      shorts_play_button.classList.remove("hidden");
     });
   });
 });
 
-// handling youtube shorts play / pause
-youtube_shorts_play_button.forEach((play_button, index) => {
-  play_button.addEventListener("click", () => {
-    play_button.classList.add("hidden");
-    youtube_shorts_link[index].classList.remove("hidden");
-    let videoURL = youtube_shorts_link[index].src;
-    youtube_shorts_originalURL[index] = videoURL;
+// handling youtube shorts thumbnail and youtube shorts iframe to play and pause
+youtube_shorts_play_button.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    shorts_iframe_div.forEach((iframe, i) => {
+      if (index != i) {
+        iframe.innerHTML = "";
+      }
+    });
+    shorts_iframe_div[index].innerHTML = `
+      <iframe
+      id="Shorts_iframe"
+      class="hidden rounded-xl youtube_shorts_link w-full video-placeholder"
+      src="https://www.youtube.com/embed/HQidzZ81Xlg"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      ></iframe>
+  `;
+    let Shorts_iframe = document.getElementById("Shorts_iframe");
+    button.classList.add("hidden");
+    let videoURL = Shorts_iframe.src;
     videoURL = videoURL + "?autoplay=1&mute=1";
-    youtube_shorts_link[index].src = videoURL;
-    youtube_shorts_play_button.forEach((element, i) => {
-      if (index !== i) {
-        element.classList.remove("hidden");
+    Shorts_iframe.src = videoURL;
+    Shorts_iframe.classList.remove("hidden");
+    //   // iframe.requestFullscreen();
+    let h = youtube_shorts_img_skeleton.height;
+    Shorts_iframe.style.height = `${h}px`;
+    video_play_button.forEach((button, i) => {
+      if (index != i) {
+        button.classList.remove("hidden");
       }
     });
-    youtube_shorts_link.forEach((element, i) => {
-      if (index !== i) {
-        element.classList.add("hidden");
-        videoURL = youtube_shorts_originalURL[index];
-        youtube_shorts_link[i].src = videoURL;
+    youtube_shorts_play_button.forEach((button, i) => {
+      if (index != i) {
+        button.classList.remove("hidden");
       }
     });
-    // stop playing youtube video when click to any shorts
-    video_play_button.forEach((element, i) => {
-        element.classList.remove("hidden");
-      });
-      youtube_video_link.forEach((element, i) => {
-        element.classList.add("hidden");
-        youtube_video_link[i].src = youtube_video_originalURL[i];
-      });
+    // stop playing shorts video
+    iframe_div.forEach((iframe) => {
+      iframe.innerHTML = "";
+    });
+    video_play_button.forEach((play_button) => {
+      play_button.classList.remove("hidden");
+    });
   });
 });
+
+// Resize iframe when screen size changes
+window.addEventListener("resize", function () {
+  // maintaining the height and width of iframe when screen resize
+  let iframe = document.getElementById("iframe");
+  if (iframe) {
+    let h = youtube_video_img_skeleton.height;
+    iframe.style.height = `${h}px`;
+  }
+  // for youtube shorts
+  let Shorts_iframe = document.getElementById("Shorts_iframe");
+  if (Shorts_iframe) {
+    let shorts_h = youtube_shorts_img_skeleton.height;
+    Shorts_iframe.style.height = `${shorts_h}px`;
+  }
+});
+// ------------------------------------------------
+
+// Menu button click funtion
+
+menu_button.addEventListener("click", () => {
+  if (aside.style.display == "none") {
+    aside.style.display = "block";
+    main_section.classList.add("pl-[240px]");
+    main_section.classList.remove("pl-[72px]");
+  } else {
+    aside.style.display = "none";
+    main_section.classList.remove("pl-[240px]");
+    main_section.classList.add("pl-[72px]");
+  }
+  // maintaining the height and width of iframe when button clicked
+  let iframe = document.getElementById("iframe");
+  if (iframe) {
+    let h = youtube_video_img_skeleton.height;
+    iframe.style.height = `${h}px`;
+  }
+  // for youtube shorts
+  let Shorts_iframe = document.getElementById("Shorts_iframe");
+  if (Shorts_iframe) {
+    let shorts_h = youtube_shorts_img_skeleton.height;
+    Shorts_iframe.style.height = `${shorts_h}px`;
+  }
+});
+
+// search bar on focus
+let search_bar_div = document.getElementById("search_bar_div");
+let search_bar_input = document.getElementById("search_bar_input");
+
+search_bar_input.addEventListener("focus", () => {
+  search_bar_div.classList.remove("border-gray-300")
+  search_bar_div.classList.add("border-blue-500")
+})
+
+search_bar_input.addEventListener("blur", () => {
+  search_bar_div.classList.add("border-gray-300")
+  search_bar_div.classList.remove("border-blue-500")
+})
