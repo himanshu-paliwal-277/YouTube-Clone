@@ -17,6 +17,32 @@ let youtube_shorts_img_skeleton = document.getElementById(
   "youtube_shorts_img_skeleton"
 );
 
+// All youtube video here
+const all_youtube_videos = [
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/k09ovfPMLlc?si=D7FoVDV8Cf0EGmOZ",
+  "https://www.youtube.com/embed/bT70Qqgn-qY?si=5gW5-isHAmUhwrkj",
+  "https://www.youtube.com/embed/deztUdPApiM?si=RYsnKZZQQnyXKJBi",
+  "https://www.youtube.com/embed/KRDwp6J_LTQ?si=u6Xmea4za4cjf8qN",
+  "https://www.youtube.com/embed/9CgTyqctTz0?si=wM0VNaG0Sf9WPnSC",
+
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+  "https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu",
+]
+
+// All youtube shorts here
+
 // handling youtube video thumbnail and youtube video iframe to play and pause
 video_play_button.forEach((button, index) => {
   button.addEventListener("click", () => {
@@ -28,7 +54,7 @@ video_play_button.forEach((button, index) => {
     iframe_div[index].innerHTML = `<iframe
     id="iframe"
     class="hidden rounded-xl w-full video-placeholder"
-    src="https://www.youtube.com/embed/dEU2ibHQnjM?si=VoQQg-DFV4wFthmu"
+    src="${all_youtube_videos[index]}"
     title="YouTube video player"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -164,3 +190,6 @@ search_bar_input.addEventListener("blur", () => {
   search_bar_div.classList.add("border-gray-300")
   search_bar_div.classList.remove("border-blue-500")
 })
+
+// Light mode and Dark mode feature
+let dark_mode_button = document.getElementById("dark_mode_button");
