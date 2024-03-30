@@ -182,14 +182,77 @@ let search_bar_div = document.getElementById("search_bar_div");
 let search_bar_input = document.getElementById("search_bar_input");
 
 search_bar_input.addEventListener("focus", () => {
-  search_bar_div.classList.remove("border-gray-300")
-  search_bar_div.classList.add("border-blue-500")
+  search_bar_div.style.borderColor = "#1662ff";
 })
 
 search_bar_input.addEventListener("blur", () => {
-  search_bar_div.classList.add("border-gray-300")
-  search_bar_div.classList.remove("border-blue-500")
+  search_bar_div.style.borderColor = "var(--border-color)";
 })
 
 // Light mode and Dark mode feature
-let dark_mode_button = document.getElementById("dark_mode_button");
+let dark_mode_light_mode_button = document.getElementById("dark_mode_light_mode_button");
+let dark_mode_svg = document.querySelector("#dark_mode_light_mode_button > div:nth-child(1)");
+let light_mode_svg = document.querySelector("#dark_mode_light_mode_button > div:nth-child(2)");
+const root = document.documentElement;
+
+dark_mode_light_mode_button.addEventListener("click", () => {
+  let all_svg = document.querySelectorAll("svg");
+  let youtube_logo_for_dark_theme = document.getElementById("youtube_logo_for_dark_theme");
+  let youtube_logo_for_light_theme = document.getElementById("youtube_logo_for_light_theme");
+  if(dark_mode_svg.classList.contains("hidden")){
+    dark_mode_svg.classList.remove("hidden")
+    light_mode_svg.classList.add("hidden")
+    root.style.setProperty('--background-color', 'white');
+    root.style.setProperty('--primary-color', 'black');
+    root.style.setProperty('--skeleton-bg-color', '#e6e6e6');
+    root.style.setProperty('--skeleton-changed-bg-color', '#d6d6d6');
+    root.style.setProperty('--secondary-bg-color', '#e5e7eb7e');
+    root.style.setProperty('--border-color', '#cfcfcf');
+    root.style.setProperty('--button-hover-bg-color', '#e5e7ebc2');
+    // changing all svg to black 
+    all_svg.forEach((svg) => {
+        svg.style.filter = `invert(0)`;
+    })
+     // changing the logo of website
+     youtube_logo_for_light_theme.classList.remove("hidden");
+     youtube_logo_for_dark_theme.classList.add("hidden");
+  }
+  else{
+    dark_mode_svg.classList.add("hidden")
+    light_mode_svg.classList.remove("hidden")
+    root.style.setProperty('--background-color', 'black');
+    root.style.setProperty('--primary-color', 'white');
+    root.style.setProperty('--skeleton-bg-color', '#3d3d3d');
+    root.style.setProperty('--skeleton-changed-bg-color', '#494949');
+    root.style.setProperty('--secondary-bg-color', '#494949c7');
+    root.style.setProperty('--border-color', 'gray');
+    root.style.setProperty('--button-hover-bg-color', '#494949');
+    // changing all svg to white 
+    all_svg.forEach((svg, i) => {
+      if(i != 30 && i != 31 && i != 32 && i != 33 && i != 1 && i != 2){
+        svg.style.filter = `invert(1)`;
+      }
+    })
+    // changing the logo of website
+    youtube_logo_for_light_theme.classList.add("hidden");
+    youtube_logo_for_dark_theme.classList.remove("hidden");
+  }
+})
+
+// hover function - This function changes the bg of element when mouse enter
+function mouseEnter_in_element(element){
+  element.style.backgroundColor = `var(--secondary-bg-color)`;
+}
+
+function mouseLeave_element(element){
+  element.style.backgroundColor = `var(--background-color)`;
+}
+
+// hover function - This function changes the bg of button when mouse enter
+function mouseEnter_in_button(element){
+  element.style.backgroundColor = `var(--button-hover-bg-color)`;
+}
+
+function mouseLeave_button(element){
+  element.style.backgroundColor = `var(--secondary-bg-color)`;
+}
