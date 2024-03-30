@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --background-color: white; 
+  --background-color: white;
   --primary-color: black;
   --secondary-bg-color: #e5e7eb7e;
   --skeleton-bg-color: #e6e6e6;
@@ -9,10 +9,6 @@
   --border-color: #cfcfcf;
   --button-hover-bg-color: #e5e7ebc2;
 }
-
-/* body {
-  background-color: var(--background-color);
-} */
 
 * {
   font-family: "Roboto", sans-serif;
@@ -113,7 +109,7 @@ aside:hover {
   nav input[type="text"] {
     width: 280px;
   }
-  .youtube_shorts{
+  .youtube_shorts {
     width: 30%;
   }
 }
@@ -150,13 +146,13 @@ aside:hover {
     padding-left: 0px;
     padding-top: 100px;
   }
-  #aside_nav{
+  #aside_nav {
     display: none;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .youtube_shorts{
+  .youtube_shorts {
     width: 45%;
   }
 }
