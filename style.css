@@ -148,7 +148,7 @@ aside:hover {
   }
   #main_section {
     padding-left: 0px;
-    padding-top: 170px;
+    padding-top: 100px;
   }
   #aside_nav{
     display: none;
@@ -158,5 +158,11 @@ aside:hover {
 @media screen and (max-width: 425px) {
   .youtube_shorts{
     width: 45%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  nav input[type="text"] {
+    width: 150px;
   }
 }

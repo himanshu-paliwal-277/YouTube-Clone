@@ -18,7 +18,7 @@
   <body class="w-full h-screen" style="background-color: var(--background-color); color: var(--primary-color);">
     <!-- Navigation bar -->
     <nav
-      class="fixed top-0 flex items-center justify-between w-full pl-4 pr-6 bg-white h-36 sm:h-14 z-10"
+      class="fixed top-0 flex items-center justify-between w-full pl-4 pr-6 bg-white h-24 sm:h-14 z-10"
       style="background-color: var(--background-color);"
     >
       <!-- Menu and logo -->
@@ -42,7 +42,7 @@
         </div>
         <!-- Youtube logo -->
         <div
-          class="sm:w-[90px] w-[250px] ml-3 sm:ml-0"
+          class="sm:w-[90px] w-[150px] ml-3 sm:ml-0"
           xmlns="http://www.w3.org/2000/svg"
           id="yt-logo-updated-svg_yt3"
           class="external-icon"
@@ -198,7 +198,7 @@
       <!-- user account and notifications -->
       <div class="flex items-center">
         <!-- dark mode & light mode button -->
-        <div id="dark_mode_light_mode_button" class="p-3 mr-16 scale-[2.2] sm:scale-100 sm:mr-3 hover:bg-gray-200 rounded-full cursor-pointer" onmouseenter="mouseEnter_in_element(this)" onmouseleave="mouseLeave_element(this)">
+        <div id="dark_mode_light_mode_button" class="p-3 mr-8 scale-150 sm:scale-100 sm:mr-3 hover:bg-gray-200 rounded-full cursor-pointer" onmouseenter="mouseEnter_in_element(this)" onmouseleave="mouseLeave_element(this)">
           <div class="">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
               <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
@@ -211,7 +211,7 @@
             </svg>
           </div>
         </div>
-        <div class="p-2 mr-16 sm:mr-2 rounded-full scale-[2.2] sm:scale-100 cursor-pointer hover:bg-gray-200" onmouseenter="mouseEnter_in_element(this)" onmouseleave="mouseLeave_element(this)">
+        <div class="p-2 mr-10 sm:mr-2 rounded-full scale-[1.7] sm:scale-100 cursor-pointer hover:bg-gray-200" onmouseenter="mouseEnter_in_element(this)" onmouseleave="mouseLeave_element(this)">
           <svg
             class="w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +225,7 @@
             ></path>
           </svg>
         </div>
-        <div class="p-2 mr-16 sm:mr-4 rounded-full scale-[2.2] sm:scale-100 cursor-pointer hover:bg-gray-200" onmouseenter="mouseEnter_in_element(this)" onmouseleave="mouseLeave_element(this)">
+        <div class="p-2 mr-10 sm:mr-4 rounded-full scale-[1.7] sm:scale-100 cursor-pointer hover:bg-gray-200" onmouseenter="mouseEnter_in_element(this)" onmouseleave="mouseLeave_element(this)">
           <svg
             class="w-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -246,7 +246,7 @@
           alt="user"
         />
         <div
-          class="flex sm:hidden justify-center items-center scale-[2.2] sm:scale-100 mr-4 sm:mr-0 cursor-pointer p-2 hover:bg-gray-200 rounded-full"
+          class="flex sm:hidden justify-center items-center scale-[1.7] sm:scale-100 cursor-pointer p-2 hover:bg-gray-200 rounded-full"
           onmouseenter="mouseEnter_in_element(this)" onmouseleave="mouseLeave_element(this)"
         >
           <svg
@@ -1146,87 +1146,87 @@
       <!-- main section (all videos here) -->
       <main class="flex-1 h-screen pt-[56px] pl-[240px]" id="main_section">
         <div
-          class="all_categories_div text-[36px] sm:text-[14px] font-medium flex items-center py-[10px] pl-6 bg-white z-10 fixed top-[134px] sm:top-[56px] w-full overflow-x-auto"
+          class="all_categories_div text-[22px] sm:text-[14px] font-medium flex items-center py-[10px] pl-6 bg-white z-10 fixed top-[86px] sm:top-[56px] w-full overflow-x-auto"
           style="background-color: var(--background-color);"
         >
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 text-white bg-black rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 text-white bg-black rounded-lg"
             style="background-color: var(--primary-color); color: var(--background-color);"
           >
             All
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Developer
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             JavaScript
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Music
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Mixes
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Engineer
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Stocks
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Editing
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Live
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Lectures
           </button>
           <button
-            class="sm:px-3 sm:py-[6px] px-7 py-[14px] mr-3 rounded-2xl sm:rounded-lg"
+            class="px-3 py-[6px] mr-3 rounded-lg"
             style="background-color: var(--secondary-bg-color);"
             onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
           >
             Motivation
           </button>
           <div
-            class="hidden sm:inline-block p-3 fixed right-2 z-[1] rounded-full cursor-pointer shadow-2xl"
+            class="p-3 fixed right-2 z-[1] rounded-full cursor-pointer shadow-2xl"
             style="background-color: var(--secondary-bg-color);"
           >
             <svg
@@ -1242,11 +1242,11 @@
               ></path>
             </svg>
           </div>
-            <div class="hidden sm:inline-block bg-white w-5 h-5 p-5 fixed right-0" style="background-color: var(--background-color);"></div>
+            <div class="bg-white w-5 h-5 p-5 fixed right-0" style="background-color: var(--background-color);"></div>
         </div>
         <!-- Youtube Videoes Section -->
         <!-- Section 1 (videos) -->
-        <section class="flex flex-wrap px-4 mt-[80px] sm:text-sm text-[32px]">
+        <section class="flex flex-wrap px-4 mt-[80px] sm:text-sm text-lg">
           <div class="video w-1/3 cursor-pointer px-2 mb-8">
             <div class="iframe_div"></div>
             <img
@@ -1257,12 +1257,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1291,12 +1291,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/A_3mLbY1nzH3MPjzEftkO8LK02HazD4PWy9XbwLDQ4hDkbBCla4EkcVNM0kZDTeMWqNCD4jVbA=s48-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     Will Devin AI replace Software Engineers?
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1325,12 +1325,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.googleusercontent.com/ytc/AIdro_krnyU9zev1u94JYs4opG8p1sYE3HQ9oButitIb7A=s176-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     How to Start Coding in 2024? Learn Programming in 2024
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1358,12 +1358,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/nhDLqeIgXMJBDIrX2bXavvHoWX0tsslDEh7k2xZ1P0W8b_CMRVigp2kxJubYEVwBcBlogZDe=s48-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     Which Coding Language should you start with in 2024? For Beginners
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1392,12 +1392,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/1FEdfq3XpKE9UrkT4eOc5wLF2Bz-42sskTi0RkK4nPh4WqCbVmmrDZ5SVEV3WyvPdkfR8sw2=s48-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     Focus on work makes you Humble
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1426,12 +1426,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/2c04wcKsx49bzYywO299JHONCNrGoMRkrtb3r7vmw-Tz-dfwi5OX-aEclqZahNDM4LHjzNXdB9Q=s48-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     Reality of Tier-2 Engineering Colleges
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1486,41 +1486,18 @@
           </div>
         </div>
         <!-- Section 2 (shorts) -->
-        <section class="youtube_shorts_container flex px-4 mt-6 w-full ">
+        <section class="youtube_shorts_container flex px-4 mt-6 w-full">
           <div class="youtube_shorts px-2">
             <div class="shorts_iframe_div"></div>
             <img
               class="rounded-xl youtube_shorts_play_button w-full cursor-pointer"
-              src="https://i.ytimg.com/vi/dcqdFDD8nF0/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLACAt4XUZvrSDzRMazn00cqn0pCsg"
+              src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px]">
-              <p>Why Coding Is Important?</p>
-              <p class="sm:text-sm text-[32px] opacity-50">3.1M views</p>
-            </div>
-          </div>
-          <div class="youtube_shorts px-2">
-            <div class="shorts_iframe_div"></div>
-            <img
-              class="rounded-xl youtube_shorts_play_button w-full cursor-pointer"
-              src="https://i.ytimg.com/vi/JIbfzmt2LuY/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLAkwr6BfYg5sKnkPXPUXcDG_9BwmQ"
-              alt="image"
-            />
-            <div class="mt-2 sm:text-base text-[38px]">
-              <p>3 Best Code Editors for Programmers...</p>
-              <p class="sm:text-sm text-[32px] opacity-50">8M views</p>
-            </div>
-          </div>
-          <div class="youtube_shorts px-2">
-            <div class="shorts_iframe_div"></div>
-            <img
-              class="rounded-xl youtube_shorts_play_button w-full cursor-pointer"
-              src="https://i.ytimg.com/vi/Dqj7WjDMTfI/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLD7RKlB4Qw5lnXZ7djKQkkTHdtPFQ"
-              alt="image"
-            />
-            <div class="mt-2 sm:text-base text-[38px]">
-              <p>3 YouTube Channels for Coding 🔥...</p>
-              <p class="sm:text-sm text-[32px] opacity-50">1.4M views</p>
+            <div class="mt-2 sm:text-base text-xl">
+              <p>#DSA #C #JAVA</p>
+              <p>#programming...</p>
+              <p class="sm:text-sm text-base opacity-50">6.2K views</p>
             </div>
           </div>
           <div class="youtube_shorts px-2">
@@ -1530,26 +1507,54 @@
               src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px] ">
-              <p>#DSA #C #JAVA #programming...</p>
-              <p class="sm:text-sm text-[32px] opacity-50">6.2K views</p>
+            <div class="mt-2 sm:text-base text-xl">
+              <p>#DSA #C #JAVA</p>
+              <p>#programming...</p>
+              <p class="sm:text-sm text-base opacity-50">6.2K views</p>
             </div>
           </div>
           <div class="youtube_shorts px-2">
             <div class="shorts_iframe_div"></div>
             <img
               class="rounded-xl youtube_shorts_play_button w-full cursor-pointer"
-              src="https://i.ytimg.com/vi_webp/v5pUL2li_zQ/oar2.webp"
+              src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px]">
-              <p>Coding - Expectation vs Reality...</p>
-              <p class="sm:text-sm text-[32px] opacity-50">7.2M views</p>
+            <div class="mt-2 sm:text-base text-xl">
+              <p>#DSA #C #JAVA</p>
+              <p>#programming...</p>
+              <p class="sm:text-sm text-base opacity-50">6.2K views</p>
+            </div>
+          </div>
+          <div class="youtube_shorts px-2">
+            <div class="shorts_iframe_div"></div>
+            <img
+              class="rounded-xl youtube_shorts_play_button w-full cursor-pointer"
+              src="./Assets/shorts_bg_image.png"
+              alt="image"
+            />
+            <div class="mt-2 sm:text-base text-xl ">
+              <p>#DSA #C #JAVA</p>
+              <p>#programming...</p>
+              <p class="sm:text-sm text-base opacity-50">6.2K views</p>
+            </div>
+          </div>
+          <div class="youtube_shorts px-2">
+            <div class="shorts_iframe_div"></div>
+            <img
+              class="rounded-xl youtube_shorts_play_button w-full cursor-pointer"
+              src="./Assets/shorts_bg_image.png"
+              alt="image"
+            />
+            <div class="mt-2 sm:text-base text-xl">
+              <p>#DSA #C #JAVA</p>
+              <p>#programming...</p>
+              <p class="sm:text-sm text-base opacity-50">6.2K views</p>
             </div>
           </div>
         </section>
         <!-- Section 3 (videos) -->
-        <section class="flex flex-wrap px-4 mt-[80px] sm:text-sm text-[32px]">
+        <section class="flex flex-wrap px-4 mt-[80px]">
           <div class="video w-1/3 cursor-pointer px-2 mb-8">
             <div class="iframe_div"></div>
             <img
@@ -1560,12 +1565,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1594,12 +1599,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1628,12 +1633,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1662,12 +1667,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1696,12 +1701,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1730,12 +1735,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1798,10 +1803,10 @@
               src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px]">
+            <div class="mt-2 sm:text-base text-xl">
               <p>#DSA #C #JAVA</p>
               <p>#programming...</p>
-              <p class="opacity-50 sm:text-sm text-[32px]">6.2K views</p>
+              <p class="opacity-50 sm:text-sm text-base">6.2K views</p>
             </div>
           </div>
           <div class="youtube_shorts px-2">
@@ -1811,10 +1816,10 @@
               src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px]">
+            <div class="mt-2 sm:text-base text-xl">
               <p>#DSA #C #JAVA</p>
               <p>#programming...</p>
-              <p class="opacity-50 sm:text-sm text-[32px]">6.2K views</p>
+              <p class="opacity-50 sm:text-sm text-base">6.2K views</p>
             </div>
           </div>
           <div class="youtube_shorts px-2">
@@ -1824,10 +1829,10 @@
               src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px]">
+            <div class="mt-2 sm:text-base text-xl">
               <p>#DSA #C #JAVA</p>
               <p>#programming...</p>
-              <p class="opacity-50 sm:text-sm text-[32px]">6.2K views</p>
+              <p class="opacity-50 sm:text-sm text-base">6.2K views</p>
             </div>
           </div>
           <div class="youtube_shorts px-2">
@@ -1837,10 +1842,10 @@
               src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px]">
+            <div class="mt-2 sm:text-base text-xl">
               <p>#DSA #C #JAVA</p>
               <p>#programming...</p>
-              <p class="opacity-50 sm:text-sm text-[32px]">6.2K views</p>
+              <p class="opacity-50 sm:text-sm text-base">6.2K views</p>
             </div>
           </div>
           <div class="youtube_shorts px-2">
@@ -1850,15 +1855,15 @@
               src="./Assets/shorts_bg_image.png"
               alt="image"
             />
-            <div class="mt-2 sm:text-base text-[38px]">
+            <div class="mt-2 sm:text-base text-xl">
               <p>#DSA #C #JAVA</p>
               <p>#programming...</p>
-              <p class="opacity-50 sm:text-sm text-[32px]">6.2K views</p>
+              <p class="opacity-50 sm:text-sm text-base">6.2K views</p>
             </div>
           </div>
         </section>
         <!-- Section 5 (videos) -->
-        <section class="flex flex-wrap px-4 mt-[80px] sm:text-sm text-[32px]">
+        <section class="flex flex-wrap px-4 mt-[80px]">
           <div class="video w-1/3 cursor-pointer px-2 mb-8">
             <div class="iframe_div"></div>
             <img
@@ -1869,12 +1874,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1903,12 +1908,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1937,12 +1942,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -1971,12 +1976,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -2005,12 +2010,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -2039,12 +2044,12 @@
             <div class="flex flex-col">
               <div class="flex mt-3 mb-1">
                 <img
-                  class="w-[85px] h-[85px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
+                  class="w-[60px] h-[60px] sm:w-[36px] sm:h-[36px] rounded-full mr-5 sm:mr-3"
                   src="https://yt3.ggpht.com/eLYdQLsjImWTY0RHLlJFA9R9h64dQYpU_tI0ShcZAskhUm2yCXEXQrX9SSSFAkBFzCJ_RtckpzQ=s68-c-k-c0x00ffffff-no-rj"
                   alt="image"
                 />
                 <div>
-                  <p class="w-full pr-5 text-[38px] sm:text-base font-medium">
+                  <p class="w-full pr-5 text-xl sm:text-base font-medium">
                     OPEN YOUR EYES AND SEE THE REALITY *IMPORTANT*
                   </p>
                   <div class="flex flex-row sm:flex-col opacity-50">
@@ -2237,13 +2242,12 @@
     </section>
 
     <!-- Navbar for mobile screen -->
-    <div class="flex justify-between px-10 sm:hidden text-xl bg-white fixed bottom-0 w-full py-3" style="background-color: var(--background-color);">
+    <div class="flex justify-around sm:hidden bg-white fixed bottom-0 w-full py-3" style="background-color: var(--background-color);">
       <div
-        class="cursor-pointer hover:bg-gray-100 flex flex-col w-[14%] items-center rounded-2xl p-2"
-        onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
+        class="cursor-pointer hover:bg-gray-100 flex flex-col w-[16%] items-center rounded-2xl p-2"
       >
         <svg
-          class="w-20"
+          class="w-12"
           xmlns="http://www.w3.org/2000/svg"
           enable-background="new 0 0 24 24"
           viewBox="0 0 24 24"
@@ -2257,11 +2261,10 @@
         <h3 class="mt-1">Home</h3>
       </div>
       <div
-        class="cursor-pointer hover:bg-gray-100 flex flex-col items-center rounded-2xl p-2 w-[14%]"
-        onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
+        class="cursor-pointer hover:bg-gray-100 flex flex-col items-center rounded-2xl p-2 w-[16%]"
       >
       <svg
-      class="w-20"
+      class="w-12"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       focusable="false"
@@ -2274,18 +2277,16 @@
         <h3 class="mt-1">Shorts</h3>
       </div>
       <div
-        class="w-24 h-24 cursor-pointer hover:bg-gray-100 my-2 flex items-center justify-center rounded-full p-4 border border-2 border-gray-600 mx-5"
+        class="w-16 h-16 cursor-pointer hover:bg-gray-100 my-2 flex items-center justify-center rounded-full p-3 border border-2 border-gray-600 mx-5"
         style="border-color: var(--border-color);"
-        onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
       >
-      <svg class="w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+      <svg class="w-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
       </div>
       <div
-        class="cursor-pointer hover:bg-gray-100 flex flex-col items-center rounded-2xl p-2 w-[14%]"
-        onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
+        class="cursor-pointer hover:bg-gray-100 flex flex-col items-center rounded-2xl p-2 w-[16%]"
       >
       <svg
-          class="w-20"
+          class="w-12"
           xmlns="http://www.w3.org/2000/svg"
           enable-background="new 0 0 24 24"
           viewBox="0 0 24 24"
@@ -2298,10 +2299,9 @@
         <h3 class="mt-1">Subscriptions</h3>
       </div>
       <div
-        class="cursor-pointer hover:bg-gray-100 flex flex-col items-center rounded-2xl p-2 w-[14%]"
-        onmouseenter="mouseEnter_in_button(this)" onmouseleave="mouseLeave_button(this)"
+        class="cursor-pointer hover:bg-gray-100 flex flex-col items-center rounded-2xl p-2 w-[16%]"
       >
-      <img class="w-20 scale-110" src="./Assets/user.png" alt="user">
+      <img class="w-12 scale-110" src="./Assets/user.png" alt="user">
         <h3 class="mt-1">You</h3>
       </div>
     </div>
