@@ -42,6 +42,19 @@ const all_youtube_videos = [
 ]
 
 // All youtube shorts here
+const all_youtube_shorts = [
+  "https://www.youtube.com/embed/dcqdFDD8nF0",
+  "https://www.youtube.com/embed/5sa738YvYVE",
+  "https://www.youtube.com/embed/Dqj7WjDMTfI",
+  "https://www.youtube.com/embed/HQidzZ81Xlg",
+  "https://www.youtube.com/embed/v5pUL2li_zQ",
+
+  "https://www.youtube.com/embed/HQidzZ81Xlg",
+  "https://www.youtube.com/embed/HQidzZ81Xlg",
+  "https://www.youtube.com/embed/HQidzZ81Xlg",
+  "https://www.youtube.com/embed/HQidzZ81Xlg",
+  "https://www.youtube.com/embed/HQidzZ81Xlg",
+]
 
 // handling youtube video thumbnail and youtube video iframe to play and pause
 video_play_button.forEach((button, index) => {
@@ -97,7 +110,7 @@ youtube_shorts_play_button.forEach((button, index) => {
       <iframe
       id="Shorts_iframe"
       class="hidden rounded-xl youtube_shorts_link w-full video-placeholder"
-      src="https://www.youtube.com/embed/HQidzZ81Xlg"
+      src="${all_youtube_shorts[index]}"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -256,3 +269,5 @@ function mouseEnter_in_button(element){
 function mouseLeave_button(element){
   element.style.backgroundColor = `var(--secondary-bg-color)`;
 }
+
+dark_mode_light_mode_button.click()
